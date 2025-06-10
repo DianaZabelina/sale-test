@@ -8,6 +8,8 @@
 >
 >*Автотесты написаны на <code><strong>*Java*</strong></code> с использованием фреймворка <code><strong>*Selenide*</strong></code> для UI-тестов*
 >
+>*Используется паттерн проектирования <code><strong>*Page Object*</strong></code>*
+>
 >*Для сборки проекта используется <code><strong>*Maven*</strong></code>.*
 >
 >*<code><strong>*JUnit 5*</strong></code> используется как фреймворк для модульного тестирования.*
