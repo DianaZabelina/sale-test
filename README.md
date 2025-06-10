@@ -1,8 +1,12 @@
-# Тестовое задание Navisale.ru
+# Пример GUI автотестов
 
 ## Технологии и инструменты
 
->*В данном проекте автотесты написаны на <code><strong>*Java*</strong></code> с использованием фреймворка <code><strong>*Selenide*</strong></code> для UI-тестов*
+>*IntelliJ IDEA Community Edition 2025.1.2*
+>
+>*Java: bellsoft-jdk21.0.4+9-windows-amd64*
+>
+>*Автотесты написаны на <code><strong>*Java*</strong></code> с использованием фреймворка <code><strong>*Selenide*</strong></code> для UI-тестов*
 >
 >*Для сборки проекта используется <code><strong>*Maven*</strong></code>.*
 >
