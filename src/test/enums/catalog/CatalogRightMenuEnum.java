@@ -9,7 +9,6 @@ public enum CatalogRightMenuEnum {
     РЮКЗАКИ("Рюкзаки"),
     ЧАСЫ("Часы"),
     ШОРТЫ("Шорты");
-    // TODO Дописать оставшиеся варианты для всех кейсов.
 
     private final String name;
 

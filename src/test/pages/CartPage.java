@@ -12,8 +12,8 @@ public class CartPage {
     private final SelenideElement
             price = $(".cart-item-default__price"),
             name = $(".cart-item-default__title"),
-            size = $(byXpath("//li[@class=\"cart-item-default__props-item\"][1]")),
-            color = $(byXpath("//li[@class=\"cart-item-default__props-item\"][2]")),
+            size = $(byXpath("//li[@class='cart-item-default__props-item'][1]")),
+            color = $(byXpath("//li[@class='cart-item-default__props-item'][2]")),
             count = $(".quantity-group__number");
 
     public String getNameOnCartPage() {

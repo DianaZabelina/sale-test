@@ -4,8 +4,7 @@ import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.exactText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
+import static com.codeborne.selenide.Selenide.*;
 
 // Page Object для страницы Продукта
 
@@ -13,7 +12,7 @@ public class ProductPage {
     private final SelenideElement
             name = $("#name"),
             price = $(".price__regular"),
-            cart = $("[data-selector=\"add-to-cart-btn\"]"),
+            cart = $("[data-selector='add-to-cart-btn']"),
             sizeSelected = $(".options-group__value"),
             count = $(".quantity-group__number");
 
@@ -45,18 +44,15 @@ public class ProductPage {
         return count.innerText();
     }
 
-    public ProductPage selectSize(String value) throws InterruptedException {
+    public ProductPage selectSize(String value) {
         SelenideElement size = sizeSelection.findBy(exactText(value));
         size.click();
-        Thread.sleep(3000); // TODO убрать слип, заменить на ожидание
         size.click();
-        Thread.sleep(3000); // TODO убрать слип, заменить на ожидание
         return this;
     }
 
-    public void addToCart() throws InterruptedException {
+    public void addToCart() {
         cart.hover();
         cart.click();
-        Thread.sleep(2000); // TODO убрать слип, заменить на ожидание
     }
 }

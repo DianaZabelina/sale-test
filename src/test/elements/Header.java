@@ -15,10 +15,10 @@ public class Header {
     CartPage cartPage = new CartPage();
 
     private final SelenideElement
-            naviSale = $("[title=\"На главную страницу\"]"),
-            login = $("[data-selector=\"header-menu-profile-toggler\"]"),
-            basket = $("[data-selector=\"basket-desktop\"]"),
-            countBasket = $("[data-selector=\"basket-desktop\"] [data-selector=\"bage\"]");
+            naviSale = $("[title='На главную страницу']"),
+            login = $("[data-selector='header-menu-profile-toggler']"),
+            basket = $("[data-selector='go-to-cart']"),
+            countBasket = $("[data-selector='basket-desktop'] [data-selector='bage']");
 
     private final ElementsCollection
             topHeader = $$(".header-top-menu__item"),
@@ -46,16 +46,14 @@ public class Header {
         login.click();
     }
 
-    public CartPage clickBasket() throws InterruptedException {
+    public CartPage clickBasket() {
         basket.click();
-        Thread.sleep(5000); // TODO убрать слип, заменить на ожидание
 
         return cartPage;
     }
 
-    public Catalog clickCatalog() throws InterruptedException {
+    public Catalog clickCatalog() {
         catalog.clickCatalog();
-        Thread.sleep(5000); // TODO убрать слип, заменить на ожидание
 
         return catalog;
     }

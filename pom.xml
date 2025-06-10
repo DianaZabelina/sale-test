@@ -11,7 +11,7 @@
     <build>
         <defaultGoal>clean dependency:copy-dependencies test</defaultGoal>
         <sourceDirectory>src</sourceDirectory>
-        <testSourceDirectory>test.java</testSourceDirectory>
+        <testSourceDirectory>src/test</testSourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

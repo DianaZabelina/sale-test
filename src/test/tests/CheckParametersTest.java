@@ -1,6 +1,5 @@
 package test.tests;
 
-import com.codeborne.selenide.WebDriverRunner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import test.elements.Header;
@@ -22,8 +21,8 @@ public class CheckParametersTest extends BaseTest {
 
     @Test
     @DisplayName("Проверка названия, цены, размера, цвета и количества товара на странице заказа и в корзине")
-    public void checkNamePriceSizeColorTest() throws InterruptedException {
-        String productName = "Lifestyle Women Vest Kadın Siyah Yelek Wnv3229-bk";
+    public void checkNamePriceSizeColorTest() {
+        String productName = "Жилет 4F H4Z21-KUMP001 30S";
         String nameOnProductPage,
                 priceOnProductPage,
                 sizeOnProductPage,
@@ -36,15 +35,13 @@ public class CheckParametersTest extends BaseTest {
                 countOnCartPage;
 
         open("");
-        WebDriverRunner.getWebDriver().manage().window().fullscreen();
         header.clickCatalog()
                 .moveOnLeftMenu(CatalogLeftMenuEnum.ЖЕНЩИНАМ.getName())
                 .clickRightMenu(CatalogRightMenuEnum.ЖИЛЕТЫ.getName())
                 .findAndClick(productName)
-                .selectSize(ProductSizeEnum.L.getName())
+                .selectSize(ProductSizeEnum.M.getName())
                 .addToCart();
 
-        Thread.sleep(3000); // TODO убрать слип, заменить на ожидание
         nameOnProductPage = productPage.getNameWithoutColorAndSizeOnProductPage();
         priceOnProductPage = productPage.getPriceOnProductPage();
         sizeOnProductPage = productPage.getSizeOnProductPage();

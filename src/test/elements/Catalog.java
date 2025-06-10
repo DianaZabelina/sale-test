@@ -18,7 +18,7 @@ public class Catalog {
 
     private final ElementsCollection
             leftMenu = $$(".mega-burger-sidebar-menu__link"),
-            rightMenu = $$("[class=\"mega-burger__sub-content mega-burger__sub-content_show\"] .mega-burger-content-menu__title");
+            rightMenu = $$("[class='mega-burger__sub-content mega-burger__sub-content_show'] .mega-burger-content-menu__title");
 
     public Catalog clickLeftMenu(String value) {
         SelenideElement menu = leftMenu.findBy(text(value));
@@ -40,7 +40,7 @@ public class Catalog {
         return this;
     }
 
-    public Catalog moveOnLeftMenu(String value) throws InterruptedException {
+    public Catalog moveOnLeftMenu(String value) {
         SelenideElement menu = leftMenu.findBy(text(value));
         menu.hover();
 
